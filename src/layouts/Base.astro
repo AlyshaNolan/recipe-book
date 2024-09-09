@@ -1,0 +1,29 @@
+---
+import PageHelper from "../pages/page.astro";
+
+import Hero from "@components/sections/hero/hero.astro"
+
+export interface Props {
+  title: string;
+  description: string;
+  hero?: any;
+  content_blocks?: any[];
+}
+
+const { description, title, hero, content_blocks }: Props = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <header>
+    <Hero bookshop:live {...hero} />
+  </header>
+  <body>
+    <PageHelper bookshop:live contentBlocks={content_blocks ?? []} />
+  </body>
+  </html>
