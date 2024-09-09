@@ -17,9 +17,8 @@ hero:
     image: /uploads/group-1.svg
     image_alt: Placeholder image
 content_blocks:
-    -
-        _bookshop_name: generic/heading
-        text: Intro
-        heading_heirarchy: h2
-        heading_size: xl
+  - _bookshop_name: generic/heading
+    text: Intro
+    heading_heirarchy: h2
+    heading_size: xl
 ---
