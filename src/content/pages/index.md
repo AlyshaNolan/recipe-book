@@ -14,7 +14,7 @@ hero:
         - 1 tsp Baking Powder
         - 1/2 Cup Chocolate Chips
         - Few drops of Vanilla Essence
-    image: /public/group-1.svg
+    image: /group-1.svg
     image_alt: Placeholder image
 content_blocks:
     -
