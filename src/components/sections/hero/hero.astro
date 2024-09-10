@@ -16,23 +16,21 @@ interface Props {
 
 const block: Props = Astro.props;
 ---
-<section class="grid grid-cols-mobile desktop:grid-cols-desktop py-16 bg-indigo-50">
+<section class="grid grid-cols-mobile desktop:grid-cols-desktop pt-16 bg-indigo-50 gap-y-4">
     <Heading class="col-span-content" {...block.heading} />
-    <div class="col-start-2 col-span-1 desktop:col-start-2 desktop:col-span-4 flex flex-col gap-6">
-        <div class="bg-indigo-300 p-4">
-            <div class="border-b border-indigo-950 mb-4"><Heading text="Ingredients" heading_heirarchy="h2" heading_size="lg" /></div>
-            <ul class="list-disc pl-4 flex flex-col gap-2">
-                {
-                    block.ingredients.map((ingredient) => {
-                        return (
-                            <li>{ingredient}</li>
-                        )
-                    })
-                }
-            </ul>
-        </div>
+    <div class="col-start-2 col-span-1 desktop:col-start-2 desktop:col-span-4 flex flex-col gap-6 bg-indigo-300 p-4 drop-shadow-xl">
+        <Heading class="border-b border-indigo-950" text="Ingredients" heading_heirarchy="h2" heading_size="lg" />
+        <ul class="list-disc pl-4 flex flex-col gap-2">
+            {
+                block.ingredients.map((ingredient) => {
+                    return (
+                        <li>{ingredient}</li>
+                    )
+                })
+            }
+        </ul>
     </div>
     <div class="col-start-2 col-span-1 desktop:col-start-7 desktop:col-span-7">
-    <img class="w-full" src={block.image} alt={block.image_alt}>
+        <img class="w-full" src={block.image} alt={block.image_alt}>
     </div>
 </section>
