@@ -17,10 +17,10 @@ interface Props {
 const block: Props = Astro.props;
 ---
 <section class="grid grid-cols-mobile desktop:grid-cols-desktop py-16 bg-indigo-50">
+    <Heading class="col-span-content" {...block.heading} />
     <div class="col-start-2 col-span-1 desktop:col-start-2 desktop:col-span-4 flex flex-col gap-6">
-        <Heading {...block.heading} />
         <div class="bg-indigo-300 p-4">
-            <div class="border-b border-slate-400 mb-4"><Heading text="Ingredients" heading_heirarchy="h2" heading_size="lg" /></div>
+            <div class="border-b border-indigo-950 mb-4"><Heading text="Ingredients" heading_heirarchy="h2" heading_size="lg" /></div>
             <ul class="list-disc pl-4 flex flex-col gap-2">
                 {
                     block.ingredients.map((ingredient) => {

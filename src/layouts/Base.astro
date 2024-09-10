@@ -10,12 +10,16 @@ export interface Props {
 const { description, title, hero }: Props = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="font-body text-xl">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
     <meta name="description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
   </head>
   <header>
     <Hero bookshop:live {...hero} />

@@ -3,17 +3,18 @@ interface Props {
     text: string;
     heading_heirarchy: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'paragraph';
     heading_size: '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+    class: string;
 }
 
 const block: Props = Astro.props;
 
 const headingSizeClass = {
-    'xs': 'text-xs',
-    'sm': 'text-sm',
-    'md': 'text-base',
-    'lg': 'text-lg desktop:text-xl',
-    'xl': 'text-xl desktop:text-2xl',
-    '2xl': 'text-2xl desktop:text-3xl'
+    'xs': 'text-base',
+    'sm': 'text-lg',
+    'md': 'text-xl',
+    'lg': 'text-2xl desktop:text-3xl',
+    'xl': 'text-4xl desktop:text-5xl',
+    '2xl': 'text-6xl desktop:text-7xl'
 }[block.heading_size];
 
 const headingTag = {
@@ -25,9 +26,9 @@ const headingTag = {
     'paragraph': 'p'
 }[block.heading_heirarchy];
 ---
-{ headingTag === 'h1' && <h1 class:list={["text-indigo-950", headingSizeClass]}>{block.text}</h1> }
-{ headingTag === 'h2' && <h2 class:list={["text-indigo-950", headingSizeClass]}>{block.text}</h2> }
-{ headingTag === 'h3' && <h3 class:list={["text-indigo-950", headingSizeClass]}>{block.text}</h3> }
-{ headingTag === 'h4' && <h4 class:list={["text-indigo-950", headingSizeClass]}>{block.text}</h4> }
-{ headingTag === 'h5' && <h5 class:list={["text-indigo-950", headingSizeClass]}>{block.text}</h5> }
-{ headingTag === 'p' && <p class:list={["text-indigo-950", headingSizeClass]}>{block.text}</p> }
+{ headingTag === 'h1' && <h1 class:list={["text-indigo-950 font-heading", headingSizeClass, block.class]}>{block.text}</h1> }
+{ headingTag === 'h2' && <h2 class:list={["text-indigo-950 font-heading", headingSizeClass, block.class]}>{block.text}</h2> }
+{ headingTag === 'h3' && <h3 class:list={["text-indigo-950 font-heading", headingSizeClass, block.class]}>{block.text}</h3> }
+{ headingTag === 'h4' && <h4 class:list={["text-indigo-950 font-heading", headingSizeClass, block.class]}>{block.text}</h4> }
+{ headingTag === 'h5' && <h5 class:list={["text-indigo-950 font-heading", headingSizeClass, block.class]}>{block.text}</h5> }
+{ headingTag === 'p' && <p class:list={["text-indigo-950 font-heading", headingSizeClass, block.class]}>{block.text}</p> }
