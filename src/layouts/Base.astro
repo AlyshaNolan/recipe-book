@@ -1,13 +1,11 @@
 ---
-import Hero from "@components/sections/hero/hero.astro"
-
+import Navigation from "@components/structures/nav/nav.astro"
 export interface Props {
   title: string;
   description: string;
-  hero?: any;
 }
 
-const { description, title, hero }: Props = Astro.props;
+const { description, title }: Props = Astro.props;
 ---
 
 <html lang="en" class="font-body text-xl">
@@ -22,7 +20,7 @@ const { description, title, hero }: Props = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
   </head>
   <header>
-    <Hero bookshop:live {...hero} />
+    <Navigation />
   </header>
   <body>
     <slot />
