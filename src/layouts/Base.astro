@@ -1,16 +1,13 @@
 ---
-import PageHelper from "../pages/page.astro";
-
 import Hero from "@components/sections/hero/hero.astro"
 
 export interface Props {
   title: string;
   description: string;
   hero?: any;
-  content_blocks?: any[];
 }
 
-const { description, title, hero, content_blocks }: Props = Astro.props;
+const { description, title, hero }: Props = Astro.props;
 ---
 
 <html lang="en">
@@ -24,6 +21,6 @@ const { description, title, hero, content_blocks }: Props = Astro.props;
     <Hero bookshop:live {...hero} />
   </header>
   <body>
-    <PageHelper bookshop:live contentBlocks={content_blocks ?? []} />
+    <slot />
   </body>
   </html>
