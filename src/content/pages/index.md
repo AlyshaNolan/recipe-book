@@ -21,6 +21,8 @@ hero:
 1. Preheat the oven to 180ºC. Line a baking tray with baking paper.
 
 2. Cream together the butter, sugar, condensed milk and vanilla until light and fluffy. Sift the flour and baking powder together and mix into the creamed mixture, followed by the chocolate chips.
+    
+    > Note: If making this into cookie dough, omit the baking powder
 
 3. Roll tablespoons of the mixture into balls, place on the prepared tray and flatten with a floured fork.
 
