@@ -27,7 +27,7 @@ const { Content } = await page.render();
 <PageLayout title={page.data.title} description={page.data.description} >
   <!-- <PageHelper bookshop:live contentBlocks={page.data.content_blocks ?? []} /> -->
   <Hero bookshop:live {...page.data.hero} />
-  <section class="grid grid-cols-mobile desktop:grid-cols-desktop py-16">
+  <section class="grid grid-cols-mobile desktop:grid-cols-desktop py-16 gap-4">
     <div class="col-span-content flex flex-col prose">
       <Heading class="" text="Method" heading_heirarchy="h2" heading_size="lg" />
       <Content />

@@ -9,7 +9,7 @@ export default {
 			gridTemplateColumns: {
 				// Simple 16 column grid
 				'mobile': '16px 1fr 16px',
-				'desktop': '1fr repeat(12, calc(min(96px, 8%))) 1fr'
+				'desktop': '1fr repeat(12, calc(min(84px, 5.5%))) 1fr'
 			},
 			fontFamily: {
 				'heading': ['Dancing Script'],
