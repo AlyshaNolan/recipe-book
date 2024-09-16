@@ -24,7 +24,7 @@ const recipes = Astro.props.page.data;
 ---
 <PageLayout title={page.data.title} description={page.data.description} >
   <section class="grid grid-cols-mobile desktop:grid-cols-desktop py-16 gap-4">
-    <div class="col-span-content">
+    <div class="col-span-content grid gap-8">
       <Heading text={page.data.title} heading_alignment="center" heading_heirarchy="h1" heading_size="2xl" class="" />
       <RecipeList recipes={recipes} />
     </div>

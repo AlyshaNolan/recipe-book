@@ -5,11 +5,12 @@ interface Props {
 
 const block = Astro.props;
 ---
-<ul>
+<ul class="grid gap-4 md:grid-cols-3">
     {
         block.recipes.map((recipe) => {
+            console.log(recipe)
             return (
-                <li>{recipe.data.title}</li>
+                <li class="border border-black p-2"><a href={`/recipes/${recipe.slug}`}>{recipe.data.title}</a></li>
             )
         })
     }
