@@ -16,6 +16,10 @@ serves: 6
 prep_time: 10mins
 cooking_time: 20mins
 original_recipe: https://edmondscooking.co.nz/recipes/biscuits/chocolate-chip-sante-biscuits/
+tags:
+    - Chocolate
+    - Biscuit
+    - Snack
 ---
 
 1. Preheat the oven to 180ºC. Line a baking tray with baking paper.

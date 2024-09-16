@@ -8,9 +8,19 @@ const block = Astro.props;
 <ul class="grid gap-4 md:grid-cols-3">
     {
         block.recipes.map((recipe) => {
-            console.log(recipe)
             return (
-                <li class="border border-black p-2"><a href={`/recipes/${recipe.slug}`}>{recipe.data.title}</a></li>
+                <li class="border border-black p-2">
+                    <a href={`/recipes/${recipe.slug}`}>{recipe.data.title}</a>
+                    <div class="text-xs flex flex-wrap gap-2">
+                        {
+                            recipe.data.tags.map((tag: string) => {
+                                return (
+                                    <p class="bg-indigo-300 p-1">{tag}</p>
+                                )
+                            })
+                        }
+                    </div>
+                </li>
             )
         })
     }

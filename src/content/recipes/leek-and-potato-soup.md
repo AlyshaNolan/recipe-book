@@ -10,6 +10,10 @@ serves: 2
 prep_time: 0mins
 cooking_time: 0mins
 original_recipe:
+tags:
+    - Vegetarian
+    - Lunch
+    - Dinner
 ---
 
 1. text

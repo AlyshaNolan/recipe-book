@@ -20,6 +20,12 @@ serves: 2
 prep_time: 20mins
 cooking_time: 20mins
 original_recipe:
+tags:
+    - Rice
+    - Risotto
+    - Bacon
+    - Lunch
+    - Dinner
 ---
 
 1. Thinly slice leek, dice bacon and finely chop garlic.

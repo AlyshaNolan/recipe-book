@@ -15,6 +15,8 @@ prep_time: 2mins
 cooking_time: 0mins
 serves: 2
 original_recipe:
+tags:
+    - Spice
 ---
 
 1. Combine all ingredients. Store in an airtight container for up to 6 months.
