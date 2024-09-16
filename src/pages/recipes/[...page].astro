@@ -1,0 +1,32 @@
+---
+import type { Page } from "astro";
+import PageLayout from "../../layouts/Base.astro";
+import {getCollection, getEntry, type CollectionEntry} from "astro:content";
+
+import Heading from "@components/generic/heading/heading.astro"
+import RecipeList from "@components/structures/recipe-list/list.astro"
+
+type Props = {
+  page: Page<CollectionEntry<"recipes">>;
+};
+
+
+export async function getStaticPaths({ paginate }: { paginate: Function }) {
+  const posts = await getCollection("recipes");
+  const page = await getEntry("pages", "recipes");
+  return paginate(posts, {
+    pageSize: "page_size" in page.data ? page.data.page_size : 6,
+  });
+}
+
+const page = await getEntry("pages", "recipes");
+const recipes = Astro.props.page.data;
+---
+<PageLayout title={page.data.title} description={page.data.description} >
+  <section class="grid grid-cols-mobile desktop:grid-cols-desktop py-16 gap-4">
+    <div class="col-span-content">
+      <Heading text={page.data.title} heading_alignment="center" heading_heirarchy="h1" heading_size="2xl" class="" />
+      <RecipeList recipes={recipes} />
+    </div>
+  </section>
+</PageLayout>

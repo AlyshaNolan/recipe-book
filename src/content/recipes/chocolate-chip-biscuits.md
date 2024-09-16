@@ -1,21 +1,17 @@
 ---
-title: Home
+title: Chocolate Chip Biscuits
 description: Chocolate Chip Biscuits Recipe
-hero:
-    heading:
-        text: Chocolate Chip Biscuits
-        heading_heirarchy: h1
-        heading_size: 2xl
-    ingredients:
-        - 125g Butter, Softened
-        - 1/4 Cup White Sugar
-        - 3 Tbsp Condensed Milk
-        - 1 1/2 Cups Flour
-        - 1 tsp Baking Powder
-        - 1/2 Cup Chocolate Chips
-        - Few drops of Vanilla Essence
-    image: /group-1.svg
-    image_alt: Placeholder image
+ingredients:
+    - 125g Butter, Softened
+    - 1/4 Cup White Sugar
+    - 3 Tbsp Condensed Milk
+    - 1 1/2 Cups Flour
+    - 1 tsp Baking Powder
+    - 1/2 Cup Chocolate Chips
+    - Few drops of Vanilla Essence
+hero_image:
+    path: /group-1.svg
+    alt: Placeholder image
 serves: 6
 prep_time: 10mins
 cooking_time: 20mins

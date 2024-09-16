@@ -1,0 +1,16 @@
+---
+interface Props {
+    recipes: any[];
+}
+
+const block = Astro.props;
+---
+<ul>
+    {
+        block.recipes.map((recipe) => {
+            return (
+                <li>{recipe.data.title}</li>
+            )
+        })
+    }
+</ul>
