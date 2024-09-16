@@ -17,6 +17,7 @@ serves: 2
 original_recipe:
 tags:
     - Spice
+thumbnail: /ai-thumbnails/tex-mex.png
 ---
 
 1. Combine all ingredients. Store in an airtight container for up to 6 months.

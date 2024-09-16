@@ -27,6 +27,7 @@ tags:
     - Chicken
     - Dinner
     - Lunch
+thumbnail: /thumbnail-illustrations/chicken-potato-slaw.png
 ---
 
 1. Cut potato into large chunks and cook in boiling water, over high heat, until easily pierced with a fork, 12-15 minutes. Once cooked drain and return the saucepan to medium-high heat, add the butter and cook, stirring, until fragrant, roughly 1 minute. Add the chicken-style stock powder. Stir to combine, then remove from heat. Add the corn and lightly crush with a fork. Cover to keep warm.

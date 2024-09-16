@@ -20,6 +20,7 @@ tags:
     - Chocolate
     - Biscuit
     - Snack
+thumbnail: /ai-thumbnails/choc-chip.png
 ---
 
 1. Preheat the oven to 180ºC. Line a baking tray with baking paper.

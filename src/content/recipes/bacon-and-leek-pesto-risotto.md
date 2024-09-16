@@ -26,6 +26,7 @@ tags:
     - Bacon
     - Lunch
     - Dinner
+thumbnail: /thumbnail-illustrations/leek-risotto.png
 ---
 
 1. Thinly slice leek, dice bacon and finely chop garlic.

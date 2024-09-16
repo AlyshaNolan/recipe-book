@@ -9,7 +9,8 @@ const block = Astro.props;
     {
         block.recipes.map((recipe) => {
             return (
-                <li class="border border-black p-2">
+                <li class="border border-black p-2 flex flex-col items-center gap-4 text-center">
+                    <img class="max-w-[200px] rounded-full" src={recipe.data.thumbnail}> 
                     <a href={`/recipes/${recipe.slug}`}>{recipe.data.title}</a>
                     <div class="text-xs flex flex-wrap gap-2">
                         {

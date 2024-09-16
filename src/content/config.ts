@@ -13,7 +13,8 @@ const recipeCollection = defineCollection({
     prep_time: z.string(),
     cooking_time: z.string(),
     original_recipe: z.string().nullable(),
-    tags: z.array(z.string())
+    tags: z.array(z.string()),
+    thumbnail: z.string().nullable(),
   }),
 });
   
