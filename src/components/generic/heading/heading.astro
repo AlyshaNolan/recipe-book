@@ -3,6 +3,7 @@ interface Props {
     text: string;
     heading_heirarchy: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'paragraph';
     heading_size: '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+    heading_alignment: 'left' | 'center';
     class: string;
 }
 
@@ -25,10 +26,15 @@ const headingTag = {
     'h5': 'h5',
     'paragraph': 'p'
 }[block.heading_heirarchy];
+
+const headingAlignmentClass = {
+    'left': 'text-left',
+    'center': 'text-center'
+}[block.heading_alignment];
 ---
-{ headingTag === 'h1' && <h1 class:list={["text-indigo-950 font-heading m-0", headingSizeClass, block.class]}>{block.text}</h1> }
-{ headingTag === 'h2' && <h2 class:list={["text-indigo-950 font-heading m-0", headingSizeClass, block.class]}>{block.text}</h2> }
-{ headingTag === 'h3' && <h3 class:list={["text-indigo-950 font-heading m-0", headingSizeClass, block.class]}>{block.text}</h3> }
-{ headingTag === 'h4' && <h4 class:list={["text-indigo-950 font-heading m-0", headingSizeClass, block.class]}>{block.text}</h4> }
-{ headingTag === 'h5' && <h5 class:list={["text-indigo-950 font-heading m-0", headingSizeClass, block.class]}>{block.text}</h5> }
-{ headingTag === 'p' && <p class:list={["text-indigo-950 font-heading m-0", headingSizeClass, block.class]}>{block.text}</p> }
+{ headingTag === 'h1' && <h1 class:list={["text-indigo-950 font-heading m-0", headingAlignmentClass, headingSizeClass, block.class]}>{block.text}</h1> }
+{ headingTag === 'h2' && <h2 class:list={["text-indigo-950 font-heading m-0", headingAlignmentClass, headingSizeClass, block.class]}>{block.text}</h2> }
+{ headingTag === 'h3' && <h3 class:list={["text-indigo-950 font-heading m-0", headingAlignmentClass, headingSizeClass, block.class]}>{block.text}</h3> }
+{ headingTag === 'h4' && <h4 class:list={["text-indigo-950 font-heading m-0", headingAlignmentClass, headingSizeClass, block.class]}>{block.text}</h4> }
+{ headingTag === 'h5' && <h5 class:list={["text-indigo-950 font-heading m-0", headingAlignmentClass, headingSizeClass, block.class]}>{block.text}</h5> }
+{ headingTag === 'p' && <p class:list={["text-indigo-950 font-heading m-0", headingAlignmentClass, headingSizeClass, block.class]}>{block.text}</p> }

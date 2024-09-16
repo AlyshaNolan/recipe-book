@@ -12,6 +12,7 @@ blueprint:
   text: Heading text
   heading_heirarchy: h2
   heading_size: 'md'
+  heading_alignment: left
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -46,3 +47,14 @@ _inputs:
           id: sm
         - name: Extra Small (12px)
           id: xs
+  heading_alignment: 
+    type: choice
+    options:
+      allow_empty: false
+      values:
+        - name: Left
+          id: left
+          icon: format_align_left
+        - name: Center
+          id: center
+          icon: format_align_center

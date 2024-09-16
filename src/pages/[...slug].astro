@@ -1,10 +1,8 @@
 ---
 import PageLayout from "../layouts/Base.astro";
-import PageHelper from "../pages/page.astro";
-import Hero from "@components/sections/hero/hero.astro"
-import Heading from "@components/generic/heading/heading.astro"
-import type { CollectionEntry } from "astro:content";
-import { getCollection } from "astro:content";
+import PageHelper from "../layouts/page.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
 export interface Props {
   page: CollectionEntry<"pages">;
 }
@@ -20,17 +18,11 @@ export async function getStaticPaths() {
 }
 
 const { page } = Astro.props;
-
-const { Content } = await page.render();
 ---
-
 <PageLayout title={page.data.title} description={page.data.description} >
-  <!-- <PageHelper bookshop:live contentBlocks={page.data.content_blocks ?? []} /> -->
-  <Hero bookshop:live {...page.data.hero} />
   <section class="grid grid-cols-mobile desktop:grid-cols-desktop py-16 gap-4">
-    <div class="col-span-content flex flex-col prose">
-      <Heading class="" text="Method" heading_heirarchy="h2" heading_size="lg" />
-      <Content />
+    <div class="col-span-content">
+      <PageHelper bookshop:live contentBlocks={page.data.content_blocks ?? []} />
     </div>
   </section>
 </PageLayout>
