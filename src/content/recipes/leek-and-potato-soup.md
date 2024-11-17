@@ -14,7 +14,7 @@ tags:
     - Vegetarian
     - Lunch
     - Dinner
-thumbnail: /ai-thumbnails/leek-potato-soup.png
+thumbnail: /thumbnail-illustrations/potato-leek-soup.png
 ---
 
 1. text
