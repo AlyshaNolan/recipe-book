@@ -7,15 +7,14 @@ interface HeadingProps {
     heading_size: '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 }
 
-interface Props {
+interface HeroProps {
     heading: HeadingProps;
     ingredients: String[];
-    image: string;
-    image_alt: string;
-    "bookshop:live": boolean;
+    image?: string;
+    image_alt?: string;
 }
 
-const block: Props = Astro.props;
+const block = Astro.props as HeroProps;
 ---
 <section class="grid grid-cols-mobile desktop:grid-cols-desktop pt-16 gap-4">
     <Heading class="col-span-content" heading_alignment="left" {...block.heading} />

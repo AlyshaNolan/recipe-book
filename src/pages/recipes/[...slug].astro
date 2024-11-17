@@ -20,12 +20,11 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props;
 
-const hero = {
+const heroProps = {
   heading: {
     text: page.data.title,
     heading_heirarchy: "h1",
-    heading_size: 'lg',
-    heading_alignment: "left"
+    heading_size: 'lg'
   },
   ingredients: page.data.ingredients,
   image: page.data.hero_image.path,
@@ -37,7 +36,7 @@ const { Content } = await page.render();
 
 <PageLayout title={page.data.title} description={page.data.description} >
   <!-- <PageHelper bookshop:live contentBlocks={page.data.content_blocks ?? []} /> -->
-  <Hero bookshop:live {...hero} />
+  <Hero {...heroProps} />
   <section class="grid grid-cols-mobile desktop:grid-cols-desktop py-16 gap-4">
     <div class="col-span-content flex flex-col prose">
       <Heading class="" text="Method" heading_heirarchy="h2" heading_size="lg" heading_alignment="left" />
