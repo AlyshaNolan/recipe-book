@@ -34,7 +34,7 @@ collections_config:
     schemas:
     schema_key:
   recipes:
-    path: src/content/pages/recipes
+    path: src/content/recipes
     output: true
     url: '/[full_slug]/'
     filter:
